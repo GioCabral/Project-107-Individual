@@ -9,7 +9,6 @@ function saveData() {
 function showPage(pageId) {
   document.querySelectorAll('.container > div').forEach(div => div.style.display = 'none');
   document.getElementById(pageId).style.display = 'block';
-  console.log('DEBUG - Current Page:', pageId);
   if (pageId === 'task') updateSubjectOptions();
   if (pageId === 'tasks') renderTasks();
   if (pageId === 'home') renderHome();
@@ -76,8 +75,6 @@ function addTask() {
   const subject = document.getElementById('subjectSelect').value;
   const due = document.getElementById('taskDue').value;
   const priority = document.getElementById('taskPriority').value;
-
-  console.log('DEBUG - Task Input:', { title, subject, due, priority });
 
   if (title && subject && due) {
     tasks.push({ title, subject, due, priority, done: false });
