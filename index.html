@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyBuddy</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">StudyBuddy</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('home')">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('subject')">Add Subject</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('task')">Add Task</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('tasks')">View Tasks</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div id="home">
+      <h1>Welcome to StudyBuddy!</h1>
+      <p>Start organizing your study life today.</p>
+    </div>
+
+    <div id="subject" style="display:none;">
+      <h2>Add a Subject</h2>
+      <input type="text" id="subjectInput" class="form-control" placeholder="e.g. Math">
+      <button class="btn btn-primary mt-2" onclick="addSubject()">Add Subject</button>
+      <div id="subjectMsg" class="mt-2 text-success"></div>
+    </div>
+
+    <div id="task" style="display:none;">
+      <h2>Add a Task</h2>
+      <select id="subjectSelect" class="form-select mb-2"></select>
+      <input type="text" id="taskTitle" class="form-control mb-2" placeholder="Task Title">
+      <input type="date" id="taskDue" class="form-control mb-2">
+      <select id="taskPriority" class="form-select mb-2">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <button class="btn btn-primary" onclick="addTask()">Add Task</button>
+      <div id="taskMsg" class="mt-2 text-success"></div>
+    </div>
+
+    <div id="tasks" style="display:none;">
+      <h2>Your Tasks</h2>
+      <div id="taskList"></div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
