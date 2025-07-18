@@ -19,10 +19,6 @@ This app is built for:
 - People studying for exams or certifications
 - Anyone who needs a simple planner for study routines
 
-## 🖼️ Preview
-
-![StudyBuddy Screenshot](screenshot.png)
-
 ## 🛠️ Technologies Used
 
 - HTML5
